@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    This is the trade list page. It should show a list of trades made by the user.
+
+    <ul>
+
+        <% sells.forEach(function(sell) {%>
+            
+            <li>
+                
+                <li>Seller's Name: <%= sell.user.name%></li>
+               <li>BTC : <%= sell.BTC%></li>
+                <li>ETH : <%= sell.ETH%></li>
+                <li>DOGE : <%= sell.DOGE%></li>
+                <li>XRP : <%= sell.XRP%></li>
+                <li><%= sell.createdAt.toLocaleString() %></li>
+                
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="sellId" value="<%= sell._id %>">
+                        <input type="hidden" name="typeExchangeRate" value="USD">
+                        <button type="submit">BUY with USD</button>
+                    </form>
+                    <form action="/buy" method="POST">
+                        <input type="hidden" name="sellId" value="<%= sell._id %>">
+                        <input type="hidden" name="typeExchangeRate" value="THB">
+                        <button type="submit">BUY with THB</button>
+                    </form>
+                
+               
+            </li>
+            
+            <% }) %>
+    </ul>
+            
+</body>
+<a href="/main">Back to Currency Main Page</a>
+</html>

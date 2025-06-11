@@ -1,0 +1,8 @@
+h1 {
+    color: red;
+}
+
+.landing-page {
+    display: flex;
+    padding: 20%;
+}

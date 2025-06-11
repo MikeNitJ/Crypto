@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Welcome to the Currency Main Page</h1>
+    <div>       this is the currency main page and it should show user balances and transactions</div>
+    <div>
+        <h2>Crypto Balances</h2>
+        <ul>
+            <li>Bitcoin (BTC):<%= crypto.BTC %></li>
+            <li>Ethereum (ETH):<%= crypto.ETH %></li>
+            <li>DOGE:<%= crypto.DOGE %></li>
+            <li>XRP:<%= crypto.XRP %> </li>
+        </ul>
+        <h2>Fiat Balances</h2>
+        <ul>
+            <li>United States Dollars (USD): <%= fiat.USD %> </li>
+            <li>Thai Baht (THB): <%= fiat.THB %> </li>
+            
+        </ul>
+        <h2>Transactions</h2>
+        <a href="/tradelist">Tradelist</a>
+        <h2> Sell </h2>
+        <form action="/sell" method="POST">
+            <ul>
+                <li>BTC:
+                    <input type="number" name="BTC" placeholder="Amount to sell" required value="0">
+                </li>
+                <li>ETH:
+                    <input type="number" name="ETH" placeholder="Amount to sell" required value="0">
+                </li>
+                <li>DOGE:
+                    <input type="number" name="DOGE" placeholder="Amount to sell" required value="0">
+                    
+                </li>
+                <li>XRP:
+                    <input type="number" name="XRP" placeholder="Amount to sell" required value="0">
+                
+                </li>
+            </ul>
+            <button type="submit">Sell</button>
+        </form>
+        <h2> Transfer </h2>
+        <form action="/transfer" method="POST">
+            <ul>
+                <li>name:
+                    <input type="text" name="name" placeholder="Name of the person to transfer to" required>
+                    
+                <li>BTC:
+                    <input type="number" name="BTC" placeholder="Amount to transfer" required value="0">
+                </li>
+                <li>ETH:
+                    <input type="number" name="ETH" placeholder="Amount to transfer" required value="0">
+                </li>
+                <li>DOGE:
+                    <input type="number" name="DOGE" placeholder="Amount to transfer" required value="0">
+                    
+                </li>
+                <li>XRP:
+                    <input type="number" name="XRP" placeholder="Amount to transfer" required value="0">
+                
+                </li>
+            </ul>
+            <button type="submit">transfer</button>
+        </form>
+    </div>
+</body>
+</html>
