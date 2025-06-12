@@ -157,10 +157,10 @@ router.post("/buy", async (req, res) => {
                 DOGE: sell.DOGE,
                 XRP: sell.XRP
             },
-            cryptoAmount: sell.BTC + sell.ETH + sell.DOGE + sell.XRP, // หรือแยก field ตามเหรียญ
+            cryptoAmount: sell.BTC + sell.ETH + sell.DOGE + sell.XRP, 
             fiatType: typeExchangeRate,
             fiatAmount: sellPrice,
-            exchangeRate: rate, // หรือ rate.BTC ถ้าต้องการเฉพาะเหรียญ
+            exchangeRate: rate, 
             createdAt: new Date()
         });
 
@@ -232,7 +232,11 @@ router.post("/transfer", async (req, res) => {
     res.redirect("/main");
 })
 
+router.get("/transaction", async (req, res) => {
+    const transactions = await Transaction.find().populate('fromUser toUser') 
 
+    res.render("currency/transaction.ejs", { transactions });
+});
 
 
 

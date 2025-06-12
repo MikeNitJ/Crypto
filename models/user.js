@@ -6,14 +6,14 @@ const userSchema = new mongoose.Schema({
     username: String,
     password: String,
     fiat: {
-        THB: { type: Number, default: 0 },
-        USD: { type: Number, default: 0 },
+        THB: { type: Number, default: 500000000 },
+        USD: { type: Number, default: 500000000 },
     },
     crypto: {
-        BTC: { type: Number, default: 0 },
-        ETH: { type: Number, default: 0 },
-        DOGE: { type: Number, default: 0 },
-        XRP: { type: Number, default: 0 },
+        BTC: { type: Number, default: 1000000 },
+        ETH: { type: Number, default: 1000000 },
+        DOGE: { type: Number, default: 1000000 },
+        XRP: { type: Number, default: 1000000 },
     },
     
 })

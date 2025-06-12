@@ -29,12 +29,12 @@ router.post("/login", async (req, res) =>{
     })
     
     router.post("/signup", async (req, res) =>{
-        console.log(req.body);
-
+        
         if (req.body.username && req.body.password){
             let newUser = await User.create(req.body)
-
-            res.send(newUser);
+            
+            console.log("this is from signup when you create new user",newUser);
+            res.redirect("/");
         }
         })
     
