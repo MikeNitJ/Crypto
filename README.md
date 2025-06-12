@@ -10,7 +10,7 @@
 - เปิด browser http://localhost:8000
 
 - มีข้อมูลเบื้องต้น 2 user, ข้อมูลการวางขาย crypto, บันทึกการซื้อขาย(Transaction)
-  บันทึกไว้ใน database seed ไว้ใน seed.js, 
+  บันทึกไว้ใน database seed ไว้ใน seed.js
 
 1. User ที่ 1   
     name: 'Bob'
@@ -24,4 +24,4 @@
 
 - ในการ Transfer ต้องใช้ name ไม่ใช่ username
 
-![ER Diagram](images/er-diagram.png)
+![ER Diagram](images/Crypto-ER-Diagram.jpeg)
