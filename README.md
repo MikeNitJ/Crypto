@@ -24,4 +24,4 @@
 
 - ในการ Transfer ต้องใช้ name ไม่ใช่ username
 
-![ER Diagram](images/Crypto-ER-Diagram.jpeg)
+![ER Diagram](images/Crypto-ER-Diagram.png)
